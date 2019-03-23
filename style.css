@@ -5,14 +5,19 @@
     src: url("ARLRDBD.ttf");
 }
 
+
+
 .navbar {
-    position: relative;
-    z-index: 1;
+    position: fixed;
+    z-index: 2;
+
 }
 
 .navbar-brand {
     font-family: 'Arial Rounded MT', Arial;
-    font-size: 35px;
+    font-size: 30px;
+
+
 }
 
 
@@ -61,8 +66,8 @@
     color: white;
     margin-top: 130px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
-    margin-bottom: 44px;
-    font-size: 34px;
+    margin-bottom: 20px;
+    font-size: 40px;
 }
 
 .info-panel {
@@ -127,10 +132,54 @@
 
 @media (min-width: 992px) {
 
+
+
+    .navbar {
+        position: relative;
+        z-index: 1;
+
+    }
+
+    .navbar-me {
+        padding: 10px 0px;
+        background-color: transparent !important;
+        top: 0px;
+        border: 0px;
+        border-radius: 0px;
+    }
+
+    .fixed-me {
+        /* transition: all 1s ; */
+        transition: all 1s ease-in;
+    }
+
+    .fixed-me {
+        /* background-color:#fff !important; */
+        padding: 0px !important;
+        margin-bottom: 5px;
+        position: fixed;
+        top: 0;
+        z-index: 888;
+        width: 100%;
+        background-color: #000000c4 !important;
+        /* border-bottom: 3px solid hsla(0, 0%, 31%, 0.205) !important; */
+
+    }
+
+
+    /* 
+    .navbar-light {
+        transition: 500ms ease;
+        background: #1b23236e !important;
+    } */
+
+
+
     .navbar-brand,
     .nav-link {
         color: white !important;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+
     }
 
 
@@ -151,9 +200,7 @@
     }
 
 
-    .bg-light {
-        background-color: transparent !important;
-    }
+
 
     .jumbotron {
 
@@ -164,6 +211,8 @@
     .jumbotron .display-4 {
         font-size: 60px;
     }
+
+
 
 
 }
