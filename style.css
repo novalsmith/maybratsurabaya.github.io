@@ -137,8 +137,10 @@
 }
 
 .fiture1 {
-    background: linear-gradient(135deg, #b938ff 0%, #14c0cf,#f76b1c, 100%);
-     
+    /* background: linear-gradient(10deg, #b938ff 0%, #14c0cf,#f76b1c, 100%); */
+      background: linear-gradient(130deg, #6b1f01 -5%, transparent),
+      url("bg.jpg") no-repeat center;
+       /* filter: grayscale(100%); */
     margin: 2px;
        border-radius: 12px;
        height: 100%;
@@ -146,21 +148,29 @@
        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
             box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.5);
             position: relative;
+ transition: 0.5s;
+            text-align: center;
             
 }
 
-.fiture1.a {
-    /* background: url("mtechlogo.png")  cover linear-gradient(135deg, #e3c6f3 0%, #1bcedf 100%); */
-    background: url("bg.jpg");
-    background-size:cover;
-    opacity: 0.8;  
-     z-index:-1;
-    
-  
+.fiture1:hover {
+    /* background: linear-gradient(10deg, #b938ff 0%, #14c0cf,#f76b1c, 100%); */
+    background: linear-gradient(130deg, #6b1f01 -5%, transparent),
+        url("bg.jpg") no-repeat center;
+    filter: grayscale(100%);
+    margin: 2px;
+    border-radius: 12px;
     height: 100%;
-   
- 
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+
+    text-align: center;
+
 }
+
+ 
 
 
 .fiture2 {
