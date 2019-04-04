@@ -35,11 +35,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#">Features</a>
-          <a class="nav-item nav-link" href="#"> Pricing</a>
-          <a class="nav-item nav-link" href="#">About</a>
-          <a class="nav-item nav-link" href="#">Blog</a>
+          <a class="nav-item nav-link active pagescroll" href="#home">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link pagescroll" href="#fitur">Features</a>
+          <a class="nav-item nav-link pagescroll" href="#harga"> Pricing</a>
+          <a class="nav-item nav-link pagescroll" href="#about">About</a>
+          <a class="nav-item nav-link pagescroll" href="#">Blog</a>
           <a class="nav-item tombol btn btn-primary" href="#">Join Us</a>
 
         </div>
@@ -52,9 +52,9 @@
 
   <!-- jumbotron -->
 
-  <div class="jumbotron jumbotron-fluid">
+  <div class="jumbotron jumbotron-fluid head" id="home">
     <div class="container">
-      <h1 class="display-4"> <span> Mosfram Technologhy</span> <br>
+      <h1 class="display-4 head"> <span> Mosfram Technologhy</span> <br>
         System Aplikasi <span>Terintegrasi</span></h1>
       <!-- <a class="tombol btn btn-primary" href="#">Our Work</a> -->
 
@@ -71,6 +71,11 @@
     <div class="row justify-content-center">
       <div class="col-10 info-panel">
         <div class="row">
+          <span data-toggle="modal" data-target="#exampleModalCenter">
+            <a href="#" class="btn btn-danger btn-sm tombol tombols red-tooltip" title="Detail" data-toggle="tooltip"
+              data-placement="left">
+              <i class="fas fa-info-circle"></i> </a>
+          </span>
           <div class="col-lg">
             <img src="038-user.png" alt="" class="float-left">
             <h4>Fixed Problems</h4>
@@ -92,11 +97,7 @@
           <!-- <span data-toggle="modal" data-target="#id">
             <a data-toggle="tooltip" data-placement="top" title="My Tooltip text!">+</a>
           </span> -->
-          <span data-toggle="modal" data-target="#exampleModalCenter">
-            <a href="#" class="btn btn-danger btn-sm tombol tombols red-tooltip" title="Detail" data-toggle="tooltip"
-              data-placement="left">
-              <i class="fas fa-info-circle"></i> </a>
-          </span>
+
         </div>
       </div>
     </div>
@@ -121,7 +122,7 @@
 
       </div>
 
-      <div class="row coworking">
+      <div class="row coworking" id="fitur">
 
         <div class="col-lg-12">
           <h2>Layanan Pembuatan <span>Website</span> <br> Membuat Aplikasi Web Menjadi lebih <span>Profesional</span>
@@ -213,9 +214,9 @@
 
       <!-- jumbotron -->
 
-      <div class="jumbotron jumbotron-fluid konsultasi">
+      <div class="jumbotron jumbotron-fluid konsultasi" id="about">
         <div class="container">
-          <h2 class="display-4"> <span> Konsultasikan dulu Masalah Anda kepada kami</span> <br>
+          <h2 class="display-4 calling"> <span> Konsultasikan dulu Masalah Anda kepada kami</span> <br>
             Kami akan berikan <span>solusi</span> terbaik</h2>
           <!-- <a class="tombol btn btn-primary" href="#">Our Work</a> -->
 
@@ -226,44 +227,33 @@
 
 
 
-
-
-
-
-    </div>
-
-
-
-
-
-
-
-    <!-- Button trigger modal -->
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
           </div>
         </div>
       </div>
+
+
+
     </div>
 
-
-
+    <!-- Button trigger modal -->
 
 
 
@@ -282,21 +272,28 @@
         $('[data-toggle="tooltip"]').on('shown.bs.tooltip', function () {
           $('.red-tooltip').addClass('animated swing');
         })
-      })
+      });
+    </script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $("a[href^='#']").click(function (e) {
+        e.preventDefault();
+
+        var position = $($(this).attr("href")).offset().top;
+
+        $("body, html").animate({
+          scrollTop: position
+        } /* speed */ );
+      });
     </script>
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+
+
+
 </body>
 
 </html>
