@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Markazi+Text|Raleway');
+
+
+body {
+  margin: 0;
+}
+
+#parallax-container {
+  display: block;
+  height: 750px;
+}
+
+#parallax-container div {
+  position: fixed;
+  top: 0;
+  background-position: center !important;
+  transform: translateY(0px);
+  height: 750px;
+  width: 100%;
+}
+
+#content {
+  position: relative;
+  background-color: #030f33;
+  color: #ffffff;
+  padding: 100px;
+}
+
+#content h1 {
+  font-size: 100px;
+  text-align: center;
+  font-family: 'Markazi Text', serif;
+}
+
+#content p {
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+}
+</style>
+
+</head>
+<body>
+    <div id="parallax-container">
+        <div style="background: url(https://cdn2.hubspot.net/hubfs/1951013/Parallax/SkyBG.png);"></div>
+        <div style="background: url(https://cdn2.hubspot.net/hubfs/1951013/Parallax/Clouds1.png);"></div>
+        <div style="background: url(https://cdn2.hubspot.net/hubfs/1951013/Parallax/Clouds2.png);"></div>
+        <div style="background: url(https://cdn2.hubspot.net/hubfs/1951013/Parallax/Clouds3.png);"></div>
+        <div style="background: url(https://cdn2.hubspot.net/hubfs/1951013/Parallax/Moon.png)"></div>
+        <div style="background: url(https://cdn2.hubspot.net/hubfs/1951013/Parallax/Hill.png)"></div>
+      </div>
+        <div id="content">
+        <h1>Parallax Effect</h1>
+          <p>The parallax code is from Collin Delphia's CodePen <a href="https://codepen.io/Kikoku/pen/PWyyVg">here</a>.</p>
+          <p>I created the artwork in Adobe Illustrator based on the Animal Silhouette Moonlight Vector Illustration - Illustrator Tutorial by tutvid <a href="https://www.youtube.com/watch?v=RtnCn65MdN0">here</a>.</p>
+      </div>
+      
+
+      <script>
+      
+      window.addEventListener('scroll', () => {
+  let parent =  document.getElementById('parallax-container');
+  let children = parent.getElementsByTagName('div');
+  for(let i = 0; i < children.length; i++) {
+    children[i].style.transform = 'translateY(-' + (window.pageYOffset * i / children.length) + 'px)';
+  }
+}, false)
+      </script>
+</body>
+</html>
