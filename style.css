@@ -63,7 +63,8 @@
 
 .tombol {
     text-transform: uppercase;
-    border-radius: 40px
+    border-radius: 40px;
+
 }
 
 .head {
@@ -114,7 +115,8 @@
 .fiture2COMPANY a,
 .fiture2SIM a,
 .fiture3BLOG a,
-.fiture3PORTAL a {
+.fiture3PORTAL a,
+.fiture3Redesign a {
     text-decoration: none;
     color: #fff;
     text-shadow: 0 0 10px rgba(0, 0, 0, .7)
@@ -157,7 +159,8 @@
 }
 
 .fiture1SD {
-    background: linear-gradient(130deg, #6b1f01 -5%, transparent), url(sdsmpsma.jpg) no-repeat center;
+    background: linear-gradient(100deg, #194d7e 0, #db6300 0, transparent),
+        url(sdsmpsma.jpg) no-repeat center;
     margin: 10px;
     border-radius: 12px;
     height: 100%;
@@ -174,7 +177,7 @@
     background: linear-gradient(135deg, #3e748f 0, #57ca85 -5%, transparent), url(sim.jpg) no-repeat top;
     filter: grayscale(100%);
     background-size: cover;
-    margin: 5px;
+    margin: 10px;
     border-radius: 12px;
     height: 100%;
     color: #fff;
@@ -187,7 +190,7 @@
 
 .fiture3BLOG {
     background: linear-gradient(135deg, #778f3e 0, #a957ca -5%, transparent), url(blog.jpg) no-repeat center;
-    margin: 5px;
+    margin: 10px;
     border-radius: 12px;
     height: 100%;
     color: #fff;
@@ -200,8 +203,8 @@
 }
 
 .fiture1TOKO {
-    background: linear-gradient(135deg, #778f3e 0, #a957ca -5%, transparent), url(TOKO.jpg) no-repeat center;
-    margin: 5px;
+    background: linear-gradient(135deg, #a2eeb2 -5%, transparent), url(TOKO.jpg) no-repeat center;
+    margin: 10px;
     border-radius: 12px;
     height: 100%;
     color: #fff;
@@ -215,7 +218,7 @@
 
 .fiture2COMPANY {
     background: linear-gradient(135deg, #778f3e 0, #a957ca -5%, transparent), url(company.jpg) no-repeat right;
-    margin: 5px;
+    margin: 10px;
     border-radius: 12px;
     height: 100%;
     color: #fff;
@@ -228,8 +231,23 @@
 }
 
 .fiture3PORTAL {
-    background: linear-gradient(135deg, #778f3e 0, #a957ca -5%, transparent), url(portal.jpg) no-repeat right;
-    margin: 5px;
+    background: linear-gradient(135deg, #778f3e 0, #990505 -5%, transparent), url(portal.jpg) no-repeat right;
+    margin: 10px;
+    border-radius: 12px;
+    height: 100%;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .7);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .5);
+    position: relative;
+    transition: .5s;
+    text-align: center;
+    filter: grayscale(100%)
+}
+
+
+.fiture3Redesign {
+    background: linear-gradient(135deg, #778f3e 0, #380f85 -5%, transparent), url('redesign.jpg') no-repeat left;
+    margin: 10px;
     border-radius: 12px;
     height: 100%;
     color: #fff;
@@ -408,21 +426,24 @@
     .jumbotron.head {
         background-attachment: fixed;
         margin-top: -78px;
-        height: 765px;
+        height: 800px;
         overflow: hidden;
         position: sticky
     }
 
-    .jumbotron .display-4 {
-        font-size: 60px
-    }
 
-    .jumbotron .display-4 {
+
+    .jumbotron .display-4.head {
         color: #fff;
-        margin-top: 100px;
+        margin-top: 200px;
         text-shadow: 0 2px 5px rgba(0, 0, 0, .7);
         margin-bottom: 20px;
         font-size: 60pt
+    }
+
+    .jumbotron.head img {
+        width: 200px;
+        border: 5px solid #3e748f
     }
 
     .info-panel {
@@ -452,10 +473,7 @@
         display: flex
     }
 
-    .jumbotron.head img {
-        width: 200px;
-        border: 5px solid #3e748f
-    }
+
 
     .porfolio {
         opacity: 0;
@@ -535,36 +553,95 @@
     }
 
 
- 
-    .jumbotron.konsultasi {
-        background-image: url("call.jpg");
-      
-        background-size: cover;
-        background-attachment: fixed;
-        height: 500px;
-        margin-top: 150px;
-        margin-bottom: 150px;
-        text-align: center;
-        overflow: hidden;
-        position: fixed;
-     
-        z-index: 5;
- 
+
+    .jumbotron.jumbotron.jumbotron-fluid.konsultasi {
+
+        height: 700px;
+
+
     }
 
 
+
+
+
+
     .jumbotron .display-4.calling {
-       
-        margin-top: -280px;
-       font-size: 40pt!important;
-       position: absolute;
-       text-shadow: 0 5px 15px rgba(0, 0, 0, 1);
-   
-      
-       font-size: 35pt;
-       color: white;
-       z-index: 6;
-       
+        color: #fff;
+        margin-top: -120px;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, .7);
+        margin-bottom: 20px;
+        font-size: 40pt;
+        position: relative;
+
+    }
+
+
+
+
+
+    section.pricing {
+        background: #007bff;
+        background: linear-gradient(to right, #0062E6, #33AEFF);
+    }
+
+    .pricing .card {
+        border: none;
+        border-radius: 1rem;
+        transition: all 0.2s;
+        box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .pricing hr {
+        margin: 1.5rem 0;
+    }
+
+    .pricing .card-title {
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+        letter-spacing: .1rem;
+        font-weight: bold;
+    }
+
+    .pricing .card-price {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    .pricing .card-price .period {
+        font-size: 0.8rem;
+    }
+
+    .pricing ul li {
+        margin-bottom: 1rem;
+    }
+
+    .pricing .text-muted {
+        opacity: 0.7;
+    }
+
+    .pricing .btn {
+        font-size: 80%;
+        border-radius: 5rem;
+        letter-spacing: .1rem;
+        font-weight: bold;
+        padding: 1rem;
+        opacity: 0.7;
+        transition: all 0.2s;
+    }
+
+    /* Hover Effects on Card */
+
+    @media (min-width: 992px) {
+        .pricing .card:hover {
+            margin-top: -.25rem;
+            margin-bottom: .25rem;
+            box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .pricing .card:hover .btn {
+            opacity: 1;
+        }
     }
 
 }
