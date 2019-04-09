@@ -582,14 +582,16 @@
 
     section.pricing {
         background: #007bff;
-        background: linear-gradient(to right, #0062E6, #33AEFF);
+        background: linear-gradient(to bottom, rgb(43, 27, 82), rgb(0, 65, 109), transparent);
+        border-radius: 15px;
+        margin-top: 100px;
     }
 
     .pricing .card {
         border: none;
         border-radius: 1rem;
-        transition: all 0.2s;
-        box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+        transition: all 0.30s;
+        box-shadow: 0 0.10rem 1rem 0 rgba(0, 0, 0, 0.1);
     }
 
     .pricing hr {
@@ -642,6 +644,46 @@
         .pricing .card:hover .btn {
             opacity: 1;
         }
+    }
+
+
+
+    .fade {
+        transition: opacity 0.30s linear;
+        position: fixed;
+    }
+
+
+    .modal-content {
+        background: linear-gradient(100deg, #194d7e 0, #db6300 0, transparent),
+            url(sdsmpsma.jpg) no-repeat center;
+        margin: 10px;
+        border-radius: 12px;
+        height: 500%;
+        color: #fff;
+        text-shadow: 0 0 10px rgba(0, 0, 0, .7);
+        position: relative;
+        transition: .5s;
+        text-align: center;
+        filter: grayscale(0%);
+        background-size: cover;
+        padding: 30px;
+    }
+
+    .modal-body h2 {
+        background: linear-gradient(100deg, #194d7e 0, #db6300 0, transparent),
+            url(sdsmpsma.jpg) no-repeat center;
+        margin: 10px;
+        border-radius: 12px;
+        height: 500%;
+        color: #fff;
+        text-shadow: 0 0 10px rgba(0, 0, 0, .7);
+        position: relative;
+        transition: .5s;
+        text-align: center;
+        filter: grayscale(0%);
+        background-size: cover;
+        padding: 30px;
     }
 
 }
