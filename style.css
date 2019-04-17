@@ -136,7 +136,9 @@
 .fiture3BLOG a,
 .fiture3PORTAL a,
 .fiture3Redesign a,
-.partners1 a {
+.partners1 a,
+.partners2 a,
+.partners3 a {
     text-decoration: none;
     color: #fff;
     text-shadow: 0 0 10px rgba(0, 0, 0, .7)
@@ -196,6 +198,37 @@
 .partners1 {
     background: linear-gradient(100deg, #194d7e 0, #0033db 0, transparent),
         url('kabarmapegaa.jpg') no-repeat left;
+    margin: 10px;
+    border-radius: 12px;
+    height: 100%;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .7);
+    position: relative;
+    transition: .5s;
+    text-align: center;
+    filter: grayscale(100%);
+    background-size: cover
+}
+
+.partners2 {
+    background: linear-gradient(100deg, #194d7e 0, #87db00 0, transparent),
+        url('maybratsby.jpg') no-repeat left;
+    margin: 10px;
+    border-radius: 12px;
+    height: 100%;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .7);
+    position: relative;
+    transition: .5s;
+    text-align: center;
+    filter: grayscale(100%);
+    background-size: cover
+}
+
+
+.partners3 {
+    background: linear-gradient(100deg, #194d7e 0, #b700db 0, transparent),
+        url('gpi.jpg') no-repeat left;
     margin: 10px;
     border-radius: 12px;
     height: 100%;
@@ -533,8 +566,8 @@
 
 .portfolios {
     /* background-image: url("layanan.jpg"); */
-    height: 900px;
-        background: linear-gradient(0deg, #778f3e 0, #57a9ca -5%, transparent);
+    height: auto;
+    background: linear-gradient(0deg, #778f3e 0, #57a9ca -5%, transparent);
 
     /* background-attachment: fixed; */
     background-position: left;
@@ -543,9 +576,14 @@
     margin-top: 100px;
     margin-bottom: 50px;
     padding: 20px;
-  
+
     color: white;
     text-align: center;
+}
+
+.portfolios2 {
+    margin-top: -50px;
+
 }
 
 
@@ -574,6 +612,79 @@
         display: flex
     }
 }
+
+.container2 {
+    position: relative;
+    width: 100%;
+    margin: 10px;
+}
+
+.image2 {
+
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+.overlay2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: linear-gradient(0deg, #194d7e 0, black 0, transparent);
+    overflow: hidden;
+    /* margin: 10px; */
+    margin-bottom: 0px;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+
+}
+
+.container2:hover .overlay2 {
+    height: 80%;
+    /* border-radius: 12px; */
+
+}
+
+.container2:hover {
+
+    box-shadow: 2px 1px 2px rgba(20, 33, 42, 0.7);
+    transition: all 0.5s ease-in-out;
+    border-radius: 12px;
+}
+
+.text2 {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+
+.layanan {
+    background-image: url("layanan.jpg");
+    height: 500px;
+
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    position: static;
+}
+
 
 @media screen and (min-width:992px) {
 
@@ -835,20 +946,15 @@
 
 
 
-    .modal-content {
-        /* background: linear-gradient(100deg, #194d7e 0, #db6300 0, transparent),
-            url(sdsmpsma.jpg) no-repeat center; */
-        margin: 10px;
-        border-radius: 12px;
-        height: 500%;
-        /* color: #fff; */
-        /* text-shadow: 0 0 10px rgba(0, 0, 0, .7); */
-        position: relative;
-        transition: .5s;
-        text-align: center;
-        filter: grayscale(0%);
-        background-size: cover;
-        padding: 30px;
+
+
+    .modal-body {
+        background-color: linear-gradient(100deg, #194d7e 0, #db6300 0, transparent);
+
+    }
+
+    .modal-header {
+        border: none
     }
 
     .card {
@@ -856,21 +962,20 @@
 
     }
 
-    .modal-body h2 {
-        background: linear-gradient(100deg, #194d7e 0, #db6300 0, transparent),
-            url(sdsmpsma.jpg) no-repeat center;
-        margin: 10px;
-        border-radius: 12px;
-        height: 500%;
-        color: #fff;
-        text-shadow: 0 0 10px rgba(0, 0, 0, .7);
+    .modal-body.card {
         position: relative;
-        transition: .5s;
-        text-align: center;
-        filter: grayscale(0%);
-        background-size: cover;
-        padding: 30px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        /* background-color: #58535d4d; */
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, .125);
+        border-radius: .25rem;
     }
+
 
 
     .layanan {
@@ -888,61 +993,218 @@
     }
 
 
-/* our work */
+    /* our work */
 
-.container2 {
-    position: relative;
-    width: 30%;
-     margin: 15px;
-}
+    .container2 {
+        position: relative;
+        width: 30%;
+        margin: 15px;
+    }
 
-.image2 {
-    display: flex;
-    width: 100%;
-    height: 100%;
-   
-}
+    .image2 {
+        display: flex;
+        width: 100%;
+        height: 100%;
 
-.overlay2 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    }
 
-    background: linear-gradient(0deg, #194d7e 0, black 0, transparent);
-    overflow: hidden;
-     /* margin: 10px; */
-     margin-bottom: 0px;
-    width: 100%;
-    height: 0;
-    transition: .5s ease;
-}
+    .overlay2 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
 
-.container2:hover .overlay2 {
-    height: 50%;
-    
-}
-.container2:hover  {
-   
-    box-shadow: 10px 5px 20px rgba(20, 33, 42, 0.7);
-       transition: all 0.5s ease-in-out;
-}
+        background: linear-gradient(0deg, #194d7e 0, black 0, transparent);
+        overflow: hidden;
+        /* margin: 10px; */
+        margin-bottom: 0px;
+        width: 100%;
+        height: 0;
+        transition: .5s ease;
+    }
 
-.text2 {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
+    .container2:hover .overlay2 {
+        height: 50%;
 
-}
+    }
+
+    .container2:hover {
+
+        box-shadow: 10px 5px 20px rgba(20, 33, 42, 0.7);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .text2 {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+    }
 
 
-/* end our work */
+    .heading-title {
+        margin-bottom: 100px;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .heading-title h3 {
+        margin-bottom: 0;
+        letter-spacing: 2px;
+        font-weight: normal;
+    }
+
+    .p-top-30 {
+        padding-top: 30px;
+    }
+
+    .half-txt {
+        width: 60%;
+        margin: 0 auto;
+        display: inline-block;
+        line-height: 25px;
+        color: #7e7e7e;
+    }
+
+    .text-uppercase {
+        text-transform: uppercase;
+    }
+
+    .team-member,
+    .team-member .team-img {
+        position: relative;
+    }
+
+    .team-member {
+        overflow: hidden;
+    }
+
+    .team-member,
+    .team-member .team-img {
+        position: relative;
+    }
+
+    .team-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        border: 20px solid rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 0.90);
+        opacity: 0;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    .team-member:hover .team-hover .desk {
+        top: 35%;
+    }
+
+    .team-member:hover .team-hover,
+    .team-member:hover .team-hover .desk,
+    .team-member:hover .team-hover .s-link {
+        opacity: 1;
+    }
+
+    .team-hover .desk {
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        opacity: 0;
+        -webkit-transform: translateY(-55%);
+        -ms-transform: translateY(-55%);
+        transform: translateY(-55%);
+        -webkit-transition: all 0.3s 0.2s;
+        transition: all 0.3s 0.2s;
+        padding: 0 20px;
+    }
+
+    .desk,
+    .desk h4,
+    .team-hover .s-link a {
+        text-align: center;
+        color: #222;
+    }
+
+    .team-member:hover .team-hover .s-link {
+        bottom: 10%;
+    }
+
+    .team-member:hover .team-hover,
+    .team-member:hover .team-hover .desk,
+    .team-member:hover .team-hover .s-link {
+        opacity: 1;
+    }
+
+    .team-hover .s-link {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        opacity: 0;
+        text-align: center;
+        -webkit-transform: translateY(45%);
+        -ms-transform: translateY(45%);
+        transform: translateY(45%);
+        -webkit-transition: all 0.3s 0.2s;
+        transition: all 0.3s 0.2s;
+        font-size: 35px;
+    }
+
+    .desk,
+    .desk h4,
+    .team-hover .s-link a {
+        text-align: center;
+        color: #222;
+    }
+
+    .team-member .s-link a {
+        margin: 0 10px;
+        color: #333;
+        font-size: 16px;
+    }
+
+    .team-title {
+        position: static;
+        padding: 20px 0;
+        display: inline-block;
+        letter-spacing: 2px;
+        width: 100%;
+    }
+
+    .team-title h5 {
+        margin-bottom: 0px;
+        display: block;
+        text-transform: uppercase;
+    }
+
+    .team-title span {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #a5a5a5;
+        letter-spacing: 1px;
+    }
+
+    /* end our work */
+
+    .container.partnerkami {
+        margin-top: 150px;
+    }
+
+    .imagefooter {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
 
 
 }
